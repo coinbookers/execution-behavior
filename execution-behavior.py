@@ -59,4 +59,18 @@ output = {
 with open(
     "endpoint.json",
     "w"
-) as fi
+) as file:
+    json.dump(
+        output,
+        file,
+        indent=2
+    )
+
+for item in terms:
+    print(item)
+
+print(wallet.address)
+
+print(transaction["nonce"])
+
+print("Stored")
